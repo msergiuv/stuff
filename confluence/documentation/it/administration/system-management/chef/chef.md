@@ -1,10 +1,13 @@
-> **Chef**  [[home](../../../home.html)] <br/>
+[[home]](../../../../home.html) 
+
+> **Chef**
+
 [oficial site](https://www.getchef.com/)
  
 
 - [Definition](#definition)
 - [Tutorials](#tutorials)
-- [Details](#details)
+- [Installation](#installation)
 - [Tests](#tests)
 
 
@@ -18,13 +21,33 @@ Chef is a systems and cloud infrastructure automation framework that makes it ea
 [Oficial chef documentaion](http://learn.getchef.com/) 
 
   
-<a name="details"></a>
-> **Details:** 
+<a name="installation"></a>
+> **Installation:** 
 
- **Chef has 3 main parts:**<br/> 
-1. Chef server<br/>
-2. Chef client (nodes)<br/>
-3. Chef administrator's workstation<br/>
+ **Chef has 3 main parts:**<br/>
+ 
+- [Chef server](#chef-server)
+- [Chef client (nodes)](#chef-client)
+- [Chef administrator's workstation](#chef-admin)
+
+<a name="chef-server"></a>
+> **Chef Server installation steps**
+
+> **Chef Client installation steps**
+<a name="chef-client"></a>
+
+*Install the Chef client on every node you want to manage with Chef. The Chef client and the Chef server work together to bring nodes to their desired states using policies you provide as recipes.*
+
+Example for node that runs on ubuntu:
+
+1. run the following command in the shell (or install manually the package):
+
+	`curl -L https://www.opscode.com/chef/install.sh | sudo bash` 
+
+
+
+> **Chef Administration workstation installation steps**
+<a name="chef-admin"></a>
 
 
 <a name="tests"></a>

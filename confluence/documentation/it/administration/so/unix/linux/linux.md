@@ -1,5 +1,11 @@
-> **Virtual Worstation**  [[home](../../../home.html)] <br/>
-[oficial site](http://www.vmware.com/products/workstation)
+[[home]](../../../../home.html) 
+[[system-operations]]()
+
+> **Linux**
+
+[oficial site(com)](http://www.linux.com/)<br/>
+[oficial site(org)](http://www.linux.org/)<br/>
+
  
 
 - [Definition](#definition)
@@ -7,15 +13,13 @@
 - [Details](#details)
 
 
-
 <a name="definition"></a>
 > **Definition:** <br/>
-what is a virtual workstation?
-    
 
 <a name="tutorials"></a>
 > **Tutorials:** <br/>
 
   
 <a name="details"></a>
-> **Details:** 
+> **Details:**<br/>
+

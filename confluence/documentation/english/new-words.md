@@ -1,4 +1,6 @@
-> **New english words**  [[home](../../home.html)] <br/>
+[[home]](../../../../home.html) 
+
+> **New english words**
 [translation](https://translate.google.md/)<br/>
 
 
