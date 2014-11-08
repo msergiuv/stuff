@@ -2,4 +2,4 @@
 
 > **Registrations**
 
-- github(gmail.address) [address](https://github.com/)
+- github(gmail.address) [address](https://github.com/) + default(g)

@@ -2,7 +2,8 @@
 
 > **Chef**
 
-[oficial site](https://www.getchef.com/)
+[(oficial site)](https://www.getchef.com/)
+[(Oficial chef documentaion)](http://learn.getchef.com/) 
  
 
 - [Definition](#definition)
@@ -18,7 +19,7 @@ Chef is a systems and cloud infrastructure automation framework that makes it ea
 
 <a name="tutorials"></a>
 > **Tutorials:** <br/>
-[Oficial chef documentaion](http://learn.getchef.com/) 
+
 
   
 <a name="installation"></a>
@@ -33,21 +34,34 @@ Chef is a systems and cloud infrastructure automation framework that makes it ea
 <a name="chef-server"></a>
 > **Chef Server installation steps**
 
-> **Chef Client installation steps**
+- m_sergiuv (default+c)
+
+> **Chef Client (node) setup steps**
 <a name="chef-client"></a>
 
-*Install the Chef client on every node you want to manage with Chef. The Chef client and the Chef server work together to bring nodes to their desired states using policies you provide as recipes.*
+*Install the Chef client on every node to manage with Chef. The Chef client and the Chef server works together to bring nodes to their desired states using policies you provide as recipes.*
 
-Example for node that runs on ubuntu:
+Example for node that runs on ***ubuntu***:
 
-1. run the following command in the shell (or install manually the package):
+1. To install the chef client on a node run the following command in the shell (or install manually the package):
 
-	`curl -L https://www.opscode.com/chef/install.sh | sudo bash` 
+		curl -L https://www.opscode.com/chef/install.sh | sudo bash
+		# 1. follows the redirection and downloads the install.sh
+		# 2. starts a bash shell as a root level user, because normal user can't access /home/  
 
 
-
-> **Chef Administration workstation installation steps**
 <a name="chef-admin"></a>
+> **Chef Administration workstation setup steps**
+
+- Commands: 
+
+    	$ knife --version
+		# shows the version of chef client installed on admin workstation
+		$ knife client list 
+		# can be executed in the chef-repo directory
+		# list list of clients ([name of the organisation]-validator) 
+
+
 
 
 <a name="tests"></a>
