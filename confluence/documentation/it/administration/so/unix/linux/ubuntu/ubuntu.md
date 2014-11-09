@@ -7,6 +7,9 @@
 
 - [Definition](#definition)
 - [Commands description](#commands)
+- [Unix directories](#directories)
+- [root account](#root_account)
+
 - [Tutorials](#tutorials)
 - [Details](#details)
 
@@ -14,13 +17,27 @@
 <a name="definition"></a>
 > **Definition:** <br/>
 
+<a name="directories"></a>
+> **Unix directories:** [(more)](http://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/)
+
+- [opt](#opt)
+
+<a name="opt"></a>
+> **opt directory:** [(more)](http://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/opt.html)
+
+**/opt** - the directory is reserved for all the software and add-on packages that are not part of the default installation
+
+
 <a name="commands"></a>
-> **Commands description:** <br/>
+> **Commands description:**
 
 - [pwd](#cmd_pwd)
 - [clear](#cmd_clear)
 - [curl](#cmd_curl)
 - [shutdown](#cmd_shutdown)
+- [ipconfig](#cmd_ipconfig)
+- [grep](#cmd_grep)
+- [dpkg](#cmd_dpkg)
 
 
 <a name="cmd_pwd"></a>
@@ -109,7 +126,7 @@ Examples:
 	 
 
 <a name="cmd_shutdown"></a>
-> **Command to shutdown or reboot computer:** [(more)](http://www.cyberciti.biz/faq/shutdown-ubuntu-linux-computer/) <br/> 
+> **Command to shutdown or reboot computer:** [(more)](http://www.cyberciti.biz/faq/shutdown-ubuntu-linux-computer/) 
 
 - shutdown (shutdown arranges for the system to be brought down in a safe way. All logged-in users are notified that the system is going down and, within the last five minutes new logins are prevented)
 
@@ -129,11 +146,73 @@ For additional options [*command* --help]
 		$ sudo init 6
 
 <a name="tutorials"></a>
-> **Tutorials:** <br/>
+> **Tutorials:**
 
 - [How to install ubuntu, step by step](http://ubuntuserverguide.com/2014/04/how-to-install-ubuntu-server-14-04-trusty-tahr.html)
 
-  
+<a name="cmd_ipconfig"></a>
+> **ipconfig command:**<br/>
+> network info
+
+	#displays interfaces with assigned ip
+	$ ifconfig 		
+	#displays all interfaces whether or not has assigned an ip
+	$ ifconfig -a		
+	
+	$ ip addr show
+	
+	#assigning IP to interface
+	$ ifconfig eth0 192.168.1.200/24 up 	
+	#default route	
+	$ route add default gw 192.168.1.1 		
+		
+	# displays public IP
+	$ curl ipecho.net/plain ; echo			
+	$ curl ifconfig.me
+
+<a name="cmd_grep"></a>
+> **grep command:** [(more)](http://www.tecmint.com/12-practical-examples-of-linux-grep-command/)
+
+*The grep command is used to search text or searches the given file for lines containing a match to the given strings or words. By default, grep displays the matching lines. Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching lines.*
+ 
+	grep 'word' filename
+	grep 'word' file1 file2 file3
+	grep 'string1 string2'  filename
+	grep --color 'data' fileName
+
+	$ dpkg –l | grep –i chef		
+	# searches through installed packages everything with "chef" in it
+	# dpkg –l lists installed *.deb packages on system, and piped output to grep
+	# grep -i string filters out, option -i ingores case
+
+	$ grep –v “string”  /etc/apache2/file
+	# -v option inverts the output and prints non matching lines   
+ 
+  	$ find . –name “*.mp3” | grep –i JayZ | grep –vi “remix”
+	# finds all files with .m3 extension
+	# piping to grep -i filters out and prints files with the name 'JayZ'
+	# piping to grep -vi filter out does not print files with string “remix”. 
+
+<a name="cmd_dpkg"></a>
+> **dpkg command:** [(more)](http://www.howtogeek.com/howto/ubuntu/see-where-a-package-is-installed-on-ubuntu/)
+
+Where a package was installed
+
+    dpkg -L <packagename>
+
+
+<a name="root_account"></a>
+> **Enabling the root account:** [(more)](https://help.ubuntu.com/community/RootSudo)
+
+    $ sudo -i		
+	# run login shell as the target user
+	
+	$ sudo passwd root
+	# enables root account and sets a password
+
+	$ sudo passwd -dl root
+	# Re-disabling root account
+
 <a name="details"></a>
-> **Details:**<br/>
+> **Details:**
 
