@@ -9,7 +9,8 @@
 - [Commands description](#commands)
 - [Unix directories](#directories)
 - [root account](#root_account)
-
+- [directory permissions](#dir_perm)
+- [User](#user)
 - [Tutorials](#tutorials)
 - [Details](#details)
 
@@ -213,6 +214,40 @@ Where a package was installed
 	$ sudo passwd -dl root
 	# Re-disabling root account
 
-<a name="details"></a>
-> **Details:**
+<a name="dir_perm"></a>
+> **Directory permissions:**
+
+*default permission of directories in Ubuntu is 644 which means you can't create a file in a directory you are not the owner.*
+
+    $ sudo chmod -R 777 /dir/
+	# -R recursivelly
+	# changes directory permissions and enables all other users to create/modify and delete files and directories inside.
+
+<a name="user"></a>
+> **User** [(more)](https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-an-ubuntu-14-04-vps)
+	
+	# in case of remove error
+	$ mount -o remount,rw /
+
+	# list all users commad
+	$ cat /etc/passwd
+    $ cut -d: -f1 /etc/passwd
+
+	# list of all users who can login 
+	# (no system users like: bin,deamon,mail,sys, etc.)	
+	$ awk -F':' '$2 ~ "\$" {print $1}' /etc/shadow
+	
+	# add new user
+	$ sudo adduser new_username
+	$ sudo useradd new_username
+	
+	# delete/remove username
+	$ sudo userdel username
+	# Delete the home directory (default the directory /home/username)
+	$ sudo deluser --remove-home username
+	sudo rm -r /path/to/user_home_dir
+	# Delete all files from the system from this user 
+	# (not only is the home diretory)
+	$ sudo deluser --remove-all-files
+
 
