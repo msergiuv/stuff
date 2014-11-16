@@ -24,6 +24,7 @@
 
  - [Pagination](#pagination)
  - [insert](#insert) 
+ - [users](#users)
 
 <a name="pagination"></a>
 > **Pagination**
@@ -94,3 +95,19 @@ or
 			FROM   dual
 		CONNECT BY level <= 10;
 	COMMIT;
+
+<a name="users"></a>
+> **Users**
+
+In addition to the user accounts that you create, the database includes several user accounts that are automatically created upon installation.
+All databases include the administrative accounts SYS, SYSTEM, SYSMAN, and DBSNMP. Administrative accounts are highly privileged accounts. [(more)](https://docs.oracle.com/cd/E11882_01/server.112/e10897/users_secure.htm#ADMQS12004)
+
+    # login as sys dba user in SQL Plus
+	Enter user-name: /as sysdba
+
+	# lists all dba users
+	$ select * from dba_users;
+	$ select * from all_users;
+
+	# change user's password
+	$ alter user {username} identified by {new_password} 

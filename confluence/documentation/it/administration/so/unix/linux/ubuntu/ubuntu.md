@@ -245,7 +245,7 @@ Where a package was installed
 	$ sudo userdel username
 	# Delete the home directory (default the directory /home/username)
 	$ sudo deluser --remove-home username
-	sudo rm -r /path/to/user_home_dir
+	$ sudo rm -r /path/to/user_home_dir
 	# Delete all files from the system from this user 
 	# (not only is the home diretory)
 	$ sudo deluser --remove-all-files
