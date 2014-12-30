@@ -22,6 +22,22 @@
 		<td>afford</td>
 		<td>a obtine</td>
 		<td/>	
+		<td>wireframe</td>
+		<td>carcasa</td>
+	</tr>
+
+	<tr>
+		<td>insight </td>
+		<td>înțelegere</td>
+		<td/>	
+		<td>Apart</td>
+		<td>separat, aparte</td>
+	</tr>
+
+	<tr>
+		<td></td>
+		<td></td>
+		<td/>	
 		<td></td>
 		<td></td>
 	</tr>
