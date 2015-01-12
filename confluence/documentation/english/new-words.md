@@ -25,7 +25,6 @@
 		<td>wireframe</td>
 		<td>carcasa</td>
 	</tr>
-
 	<tr>
 		<td>insight </td>
 		<td>înțelegere</td>
@@ -33,7 +32,20 @@
 		<td>Apart</td>
 		<td>separat, aparte</td>
 	</tr>
-
+	<tr>
+		<td>tampered</td>
+		<td>falsificate, modificat, alterat</td>
+		<td/>	
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td/>	
+		<td></td>
+		<td></td>
+	</tr>
 	<tr>
 		<td></td>
 		<td></td>
