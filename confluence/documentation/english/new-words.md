@@ -36,12 +36,12 @@
 		<td>tampered</td>
 		<td>falsificate, modificat, alterat</td>
 		<td/>	
-		<td></td>
-		<td></td>
+		<td>cucumber</td>
+		<td>castravete</td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
+		<td>platter</td>
+		<td>platou</td>
 		<td/>	
 		<td></td>
 		<td></td>
